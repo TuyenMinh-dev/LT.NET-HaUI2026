@@ -4,22 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bai2
+namespace Bai1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Nhap so phan tu cho mang: n= ");
-            int n = int.Parse(Console.ReadLine());
-            int[] a = new int[n];
-
-            for (int i = 0; i < n; i++)
+            Console.Write("Nhap so a: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so b: ");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Tong: {a+b}");
+            Console.WriteLine($"Hieu: {a-b}");
+            Console.WriteLine($"Tich: {a*b}");
+            if (b!=0)
             {
-                Console.WriteLine("Nhap gia tri cho phan tu thu {i+1}");
-                a[i] = int.Parse(Console.ReadLine());
+                Console.WriteLine($"Thuong: {(double)a / b:F2}");
             }
-            
+            else
+            {
+                Console.WriteLine("Khong the tim thuong cua a chia b");
+            }
         }
     }
 }

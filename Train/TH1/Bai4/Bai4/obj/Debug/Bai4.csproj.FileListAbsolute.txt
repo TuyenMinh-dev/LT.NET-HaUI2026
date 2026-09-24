@@ -1,6 +1,0 @@
-E:\LT.NET\Train\TH1\Bai4\Bai4\bin\Debug\Bai4.exe.config
-E:\LT.NET\Train\TH1\Bai4\Bai4\bin\Debug\Bai4.exe
-E:\LT.NET\Train\TH1\Bai4\Bai4\bin\Debug\Bai4.pdb
-E:\LT.NET\Train\TH1\Bai4\Bai4\obj\Debug\Bai4.csproj.CoreCompileInputs.cache
-E:\LT.NET\Train\TH1\Bai4\Bai4\obj\Debug\Bai4.exe
-E:\LT.NET\Train\TH1\Bai4\Bai4\obj\Debug\Bai4.pdb

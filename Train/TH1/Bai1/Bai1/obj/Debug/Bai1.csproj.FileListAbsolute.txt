@@ -1,7 +1,0 @@
-E:\LT.NET\Train\TH1\Bai1\Bai1\bin\Debug\Bai1.exe.config
-E:\LT.NET\Train\TH1\Bai1\Bai1\bin\Debug\Bai1.exe
-E:\LT.NET\Train\TH1\Bai1\Bai1\bin\Debug\Bai1.pdb
-E:\LT.NET\Train\TH1\Bai1\Bai1\obj\Debug\Bai1.csproj.AssemblyReference.cache
-E:\LT.NET\Train\TH1\Bai1\Bai1\obj\Debug\Bai1.csproj.CoreCompileInputs.cache
-E:\LT.NET\Train\TH1\Bai1\Bai1\obj\Debug\Bai1.exe
-E:\LT.NET\Train\TH1\Bai1\Bai1\obj\Debug\Bai1.pdb
