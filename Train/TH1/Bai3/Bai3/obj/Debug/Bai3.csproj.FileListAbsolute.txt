@@ -1,0 +1,7 @@
+E:\LT.NET\Train\TH1\Bai3\Bai3\bin\Debug\Bai3.exe.config
+E:\LT.NET\Train\TH1\Bai3\Bai3\bin\Debug\Bai3.exe
+E:\LT.NET\Train\TH1\Bai3\Bai3\bin\Debug\Bai3.pdb
+E:\LT.NET\Train\TH1\Bai3\Bai3\obj\Debug\Bai3.csproj.CoreCompileInputs.cache
+E:\LT.NET\Train\TH1\Bai3\Bai3\obj\Debug\Bai3.exe
+E:\LT.NET\Train\TH1\Bai3\Bai3\obj\Debug\Bai3.pdb
+E:\LT.NET\Train\TH1\Bai3\Bai3\obj\Debug\Bai3.csproj.AssemblyReference.cache
