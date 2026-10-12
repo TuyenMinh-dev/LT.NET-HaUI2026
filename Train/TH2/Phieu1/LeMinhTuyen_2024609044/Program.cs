@@ -66,7 +66,7 @@ namespace LeMinhTuyen_2024609044
                 Console.WriteLine("Danh sach rong!");
                 return;
             }
-            Console.WriteLine("Nhap vao nguong diem x can loc (>= x): ");
+            Console.Write("Nhap vao nguong diem x can loc (>= x): ");
             double nguong = double.Parse(Console.ReadLine());
             List<ThiSinhA> ketQua = ds.FindAll(x => x.tongDiem >= nguong);
 
