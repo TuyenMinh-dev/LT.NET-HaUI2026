@@ -132,19 +132,28 @@ namespace srcDe2
                 switch (choice)
                 {
                     case 1:
+                        Console.WriteLine(new string('*', 50));
                         Them();
+                       
                         break;
                     case 2:
+                        Console.WriteLine(new string('*', 50)); 
                         hienthi();
+                      
                         break;
                     case 3:
+                        Console.WriteLine(new string('*', 50));
                         filter();
                         break;
                     case 4:
+                        Console.WriteLine(new string('*', 50));
                         FindAndUpdate();
+                  
                         break;
                     case 5:
+                        Console.WriteLine(new string('*', 50));
                         Console.WriteLine("Thoat chuong trinh!");
+                     
                         break;
                     default:
                         Console.WriteLine("Vui long nhap lai lua chon cua ban!");
