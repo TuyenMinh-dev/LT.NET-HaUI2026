@@ -1,0 +1,182 @@
+﻿<Window x:Class="De2_Tuyen_044.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:De2_Tuyen_044"
+        mc:Ignorable="d"
+        Title="QuanLyNhanVien" Height="450" Width="800"
+        Background="Beige"
+        BorderBrush="Green"
+        BorderThickness="2">
+    <Window.Resources>
+        <!-- 1. Style Header DataGrid -->
+        <Style x:Key="HeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="#DDEBF7"/>
+        </Style>
+        <!-- 2. Style cột Tiền lương: đỏ, đậm, căn phải -->
+        <Style x:Key="LuongStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+        </Style>
+        <!-- 3. Style tự động cho MỌI TextBox (không có x:Key): Focus đổi nền LightYellow -->
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="LightYellow"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!-- 4. ControlTemplate Elip dùng chung cho 2 nút khác màu -->
+        <Style x:Key="ElipseButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="18">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="QUAN LY NHAN VIEN"
+                   Foreground="Blue"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,15">
+        </TextBlock>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="110"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="34"/>
+                <RowDefinition Height="34"/>
+                <RowDefinition Height="34"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Ma NV:"
+                   Grid.Row="0" Grid.Column="0"
+                   FontSize="15"
+                   FontWeight="Bold">
+            </Label>
+            <TextBox x:Name="txtMaNV"
+                Grid.Row="0" Grid.Column="1"
+                     Height="24"
+                     VerticalContentAlignment="Center"
+                     Margin="0,0,15,0">
+            </TextBox>
+            <Label Content="Ho ten:"
+                   Grid.Row="0" Grid.Column="2"
+                    FontSize="15"
+                   FontWeight="Bold">
+            </Label>
+            <TextBox x:Name="txtName"
+                Grid.Row="0" Grid.Column="3"
+                     Height="24"
+                     VerticalContentAlignment="Center"
+                     Margin="0,0,15,0">
+            </TextBox>
+
+            <Label Content="Ngay tuyen:"
+                   Grid.Row="1" Grid.Column="0"
+                   FontSize="15"
+                   FontWeight="Bold">
+                
+            </Label>
+            <Label Content="Gioi tinh:"
+                   Grid.Row="1" Grid.Column="2"
+                    FontSize="15"
+                   FontWeight="Bold">
+            </Label>
+            <Label Content="Phong ban:"
+                   Grid.Row="2" Grid.Column="0"
+                    FontSize="15"
+                   FontWeight="Bold">
+            </Label>
+            <Label Content="So ngay lam:"
+                   Grid.Row="2" Grid.Column="2"
+                    FontSize="15"
+                   FontWeight="Bold">
+            </Label>
+            <TextBox x:Name="txtSoNgayLam"
+                Grid.Row="2" Grid.Column="3"
+                     Height="24"
+                     VerticalContentAlignment="Center"
+                     Margin="0,0,15,0">
+            </TextBox>
+            <DatePicker x:Name="dpNgayTuyen"
+                        Grid.Row="1" Grid.Column="1"                      
+                        Height="24"
+                        VerticalAlignment="Center"
+                        Margin="0,0,15,0">
+            </DatePicker>
+            <StackPanel Grid.Row="1" Grid.Column="3"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center">
+                <RadioButton x:Name="radNam" Content="Nam" IsChecked="True"  Margin="0,0,10,0"/>
+                <RadioButton x:Name="radNu" Content="Nu" />
+                
+            </StackPanel>
+            <ComboBox Grid.Row="2" Grid.Column="1"
+                      x:Name="cbPhongBan"
+                      Height="24"
+                      VerticalContentAlignment="Center"
+                      Margin="0,0,15,0">
+                <ComboBoxItem Content="To chuc"/>
+                <ComboBoxItem Content="Ke hoach"/>
+                <ComboBoxItem Content="Vat tu"/>
+            </ComboBox>
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal"
+                    HorizontalAlignment="Center" Margin="0,10">
+            <Button  x:Name="btnThem" Content="Them" Height="34" Width="110" Margin="0,0,15,0"
+                     Style="{StaticResource ElipseButtonStyle}"
+                    Click="btnThem_Click"/>
+            <Button x:Name="btnWindow2" Content="Window 2" Height="34" Width="110" Margin="0,0,15,0"
+                    Style="{StaticResource ElipseButtonStyle}"
+                    Click="btnWindow2_Click"/>
+
+        </StackPanel>
+
+        <DataGrid Grid.Row="3"
+                  x:Name="dgDanhSach"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  ColumnHeaderStyle="{StaticResource HeaderStyle}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ma NV" Binding="{Binding MaNV}" Width="75"/>
+                <DataGridTextColumn Header="Ho ten" Binding="{Binding HoTen}" Width="*"/>
+                <DataGridTextColumn Header="Ngay tuyen" Binding="{Binding NgayTuyen, StringFormat={}{0:dd-MM-yyyy}}" Width="95"/>
+                <DataGridTextColumn Header="Gioi tinh" Binding="{Binding GioiTinh}" Width="75"/>
+                <DataGridTextColumn Header="Phong ban" Binding="{Binding PhongBan}" Width="75"/>
+                <DataGridTextColumn Header="So ngay " Binding="{Binding SoNgayLam}" Width="75"/>
+                <DataGridTextColumn Header="Tien luong" Binding="{Binding TienLuong}" Width="110"
+                                    ElementStyle="{StaticResource LuongStyle}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+    </Grid>
+</Window>
