@@ -1,0 +1,150 @@
+﻿<Window x:Class="OnTap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OnTap"
+        mc:Ignorable="d"
+        Title="QUAN LY NHAN VIEN" Height="520" Width="680"
+        Background="Beige" BorderBrush="Green" BorderThickness="2"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        
+        <!--Style-->
+        <Style x:Key="HeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="#DDEBF7"/>
+            <Setter Property="Padding" Value="4"/>
+            
+        </Style>
+
+        <Style x:Key="TuoiStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+
+        </Style>
+
+        <Style x:Key="ElipseButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="Green"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Gold" CornerRadius="18">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="12">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="QUAN LY NHAN VIEN"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   Foreground="Blue"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,12">
+        </TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="110"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="34"/>
+                <RowDefinition Height="34"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Ho Ten"
+                   Grid.Row="0" Grid.Column="0"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   FontSize="15"/>
+            <TextBox x:Name="txtHoTen"
+                     Grid.Row="0" Grid.Column="1"
+                     Height="24"
+                     VerticalContentAlignment="Center"
+                     Margin="0,0,15,0"/>
+            <Label Content="Tuoi"
+                   Grid.Row="0" Grid.Column="2"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   VerticalAlignment="Center"/>
+            <TextBox x:Name="txtTuoi"
+                     Grid.Row="0" Grid.Column="3"
+                     Height="24"
+                     VerticalContentAlignment="Center"/>
+
+            <Label Content="He So Luong"
+                    Grid.Row="1" Grid.Column="0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   VerticalAlignment="Center"
+                   />
+            <TextBox x:Name="txtHeSoLuong"
+                     Grid.Row="1" Grid.Column="1"
+                     VerticalContentAlignment="Center"
+                     Height="24"
+                     Margin="0,0,15,0"/>
+            <Label Content="PhongBan"
+                   Grid.Row="1" Grid.Column="2"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   VerticalAlignment="Center"/>
+            <ComboBox x:Name="cbPhongBan"
+                      Grid.Row="1" Grid.Column="3"
+                      Height="24"
+                      VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0.4,4.6,0,5" Width="212">
+                <ComboBoxItem Content="To Chuc"/>
+                <ComboBoxItem Content="Ke Hoach"/>
+                <ComboBoxItem Content="Vat Tu"/>
+            </ComboBox>
+
+        </Grid>
+
+        <StackPanel Grid.Row="2"
+                    HorizontalAlignment="Center" Margin="0,10"
+                    Orientation="Horizontal">
+            <Button x:Name="btnNhap" Content="Nhap"
+                    Width="110" Height="34"
+                    Margin="0,0,15,0"
+                    Click="btnNhap_Click"
+                    Style="{StaticResource ElipseButtonStyle}"/>
+            <Button x:Name="btnWindow2" Content="Window2"
+                    Width="110" Height="34"
+                    Click="btnWindow2_Click"
+                    Style="{StaticResource ElipseButtonStyle}"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="3"
+                  x:Name="dgDanhSach"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  ColumnHeaderStyle="{StaticResource HeaderStyle}"
+                  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ho Ten" Binding="{Binding HoTen}" Width="*"/>
+                <DataGridTextColumn Header="Tuoi" Binding="{Binding Tuoi}" Width="70"
+                                    ElementStyle="{StaticResource TuoiStyle}"/>
+                <DataGridTextColumn Header="He So Luong" Binding="{Binding HeSoLuong}" Width="120"/>
+                <DataGridTextColumn Header="Phong Ban" Binding="{Binding PhongBan}" Width="110"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

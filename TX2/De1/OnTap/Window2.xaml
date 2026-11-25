@@ -1,0 +1,38 @@
+﻿<Window x:Class="OnTap.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OnTap"
+        mc:Ignorable="d"
+        Title="Nhan vien lon tuoi nhat" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="DANH SACH NHAN VIEN LON TUOI NHAT"
+                   FontSize="15"
+                   HorizontalAlignment="Center"
+                   FontWeight="Bold"
+                   Foreground="Black"
+                   Margin="0,0,0,10"
+                   />
+
+        <DataGrid Grid.Row="1"
+                  x:Name="dgWindow2"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ho Ten" Binding="{Binding HoTen}" Width="*"/>
+                <DataGridTextColumn Header="Tuoi" Binding="{Binding Tuoi}" Width="70"/>
+                <DataGridTextColumn Header="He So Luong" Binding="{Binding HeSoLuong}" Width="120"/>
+                <DataGridTextColumn Header="Phong Ban" Binding="{Binding PhongBan}" Width="110"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
