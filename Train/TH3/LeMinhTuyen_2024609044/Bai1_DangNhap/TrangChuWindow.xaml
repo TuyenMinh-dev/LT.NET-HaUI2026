@@ -1,0 +1,12 @@
+﻿<Window x:Class="Bai1_DangNhap.TrangChuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Trang chủ" Height="200" Width="380"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel VerticalAlignment="Center" Margin="20">
+        <TextBlock x:Name="lblChao" FontSize="16" FontWeight="Bold"
+                   HorizontalAlignment="Center"/>
+        <Button Content="Đăng xuất" Width="110" Height="32" Margin="0,20,0,0"
+                Click="BtnDangXuat_Click"/>
+    </StackPanel>
+</Window>
