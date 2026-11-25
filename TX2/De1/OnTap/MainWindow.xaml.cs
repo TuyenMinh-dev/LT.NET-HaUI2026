@@ -46,6 +46,8 @@ namespace OnTap
             if(!double.TryParse(txtHeSoLuong.Text, out double heSoLuong) || heSoLuong <= 0)
             {
                 MessageBox.Show("He so luong phai la so thuc duong","Canh bao", MessageBoxButton.OK,MessageBoxImage.Warning);
+                txtHeSoLuong.Focus();
+                return;
             }
             // 4. Đọc Phòng Ban từ ComboBox
             string phongBan = (cbPhongBan.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "";

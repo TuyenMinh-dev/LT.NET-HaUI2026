@@ -108,8 +108,7 @@
                    VerticalAlignment="Center"/>
             <ComboBox x:Name="cbPhongBan"
                       Grid.Row="1" Grid.Column="3"
-                      Height="24"
-                      VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0.4,4.6,0,5" Width="212">
+                      Height="24">
                 <ComboBoxItem Content="To Chuc"/>
                 <ComboBoxItem Content="Ke Hoach"/>
                 <ComboBoxItem Content="Vat Tu"/>
